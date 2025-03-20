@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:dbname=php_book_app;host=localhost;chaset=utf8mb4';
+$dsn = 'mysql:dbname=php_book_app;host=localhost;charset=utf8mb4';
 $user = 'root';
 $password = '';
 
@@ -19,9 +19,9 @@ try {
     // 削除した件数を取得する
     $count = $stmt_delete->rowCount();
 
-    $message = "商品を{$count}件削除しました。";
+    $message = "書籍を{$count}件削除しました。";
 
-    // 商品一覧ページにリダイレクトさせる（同時にmessageパラメータも渡す）
+    // 書籍一覧ページにリダイレクトさせる（同時にmessageパラメータも渡す）
     header("Location: read.php?message={$message}");
 } catch (PDOException $e) {
     exit($e->getMessage());

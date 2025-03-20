@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:dbname=php_book_app;host=localhost;chaset=utf8mb4';
+$dsn = 'mysql:dbname=php_book_app;host=localhost;charset=utf8mb4';
 $user = 'root';
 $password = '';
 
@@ -98,7 +98,7 @@ try {
                     <th>書籍名</th>
                     <th>単価</th>
                     <th>在庫数</th>
-                    <th>仕入先コード</th>
+                    <th>ジャンルコード</th>
                     <th>編集</th>
                     <th>削除</th>
                 </tr>

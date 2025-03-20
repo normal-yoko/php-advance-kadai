@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:dbname=php_book_app;host=localhost;chaset=utf8mb4';
+$dsn = 'mysql:dbname=php_book_app;host=localhost;charset=utf8mb4';
 $user = 'root';
 $password = '';
 
@@ -128,13 +128,13 @@ if (isset($_GET['id'])) {
                     <label for="stock_quantity">在庫数</label>
                     <input type="number" id="stock_quantity" name="stock_quantity" value="<?= $book['stock_quantity'] ?>" min="0" max="100000000" required>
 
-                    <label for="genre_code">仕入先コード</label>
+                    <label for="genre_code">ジャンルコード</label>
                     <select id="genre_code" name="genre_code" required>
                         <option disabled selected value>選択してください</option>
                         <?php
                         // 配列の中身を順番に取り出し、セレクトボックスの選択肢として出力する
                         foreach ($genre_codes as $genre_code) {
-                            // もし変数$genre_codeが書籍の仕入先コードの値と一致していれば、selected属性をつけて初期値にする
+                            // もし変数$genre_codeが書籍のジャンルコードの値と一致していれば、selected属性をつけて初期値にする
                             if ($genre_code === $book['genre_code']) {
                                 echo "<option value='{$genre_code}' selected>{$genre_code}</option>";
                             } else {
